@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "HN_TOP_N": "10",
+    "OUTPUT_CONTAINER": "hn-digests",
+    "BLOB_CONN_STR": "<replace-with-connection-string>",
+    "OPENROUTER_API_KEY": "<replace-with-openrouter-key>",
+    "OPENROUTER_MODEL": "openrouter/gpt-5.1-thinking"
+  }
+}
+
