@@ -51,6 +51,10 @@ def summarize_ai_insights(
         response.raise_for_status()
         data = response.json()
         return data["choices"][0]["message"]["content"].strip()
+    except requests.HTTPError as exc:  # pragma: no cover
+        detail = exc.response.text if exc.response is not None else "no response body"
+        logging.error("OpenRouter insights failed (%s): %s", exc.response.status_code if exc.response else "HTTPError", detail)
+        return ""
     except Exception as exc:  # pragma: no cover
         logging.error("OpenRouter insights failed: %s", exc)
         return ""
