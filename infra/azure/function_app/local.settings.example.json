@@ -7,7 +7,8 @@
     "OUTPUT_CONTAINER": "hn-digests",
     "BLOB_CONN_STR": "<replace-with-connection-string>",
     "OPENROUTER_API_KEY": "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",
-    "OPENROUTER_MODEL": "openrouter/gpt-5.1-thinking"
+    "OPENROUTER_MODEL": "openrouter/gpt-5.1-thinking",
+    "OPENROUTER_MAX_TOKENS": "600"
   }
 }
 

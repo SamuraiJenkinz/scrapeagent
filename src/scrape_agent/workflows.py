@@ -29,6 +29,7 @@ def run_daily_scrape() -> str:
             model=settings.openrouter_model,
             referer=settings.openrouter_referer,
             title=settings.openrouter_title,
+            max_tokens=settings.openrouter_max_tokens,
         )
         if insights:
             markdown = f"{markdown}\n## AI Insights\n\n{insights}\n"

@@ -22,6 +22,7 @@ python scripts/run_daily.py
 - Set `OPENROUTER_API_KEY` (optionally `OPENROUTER_MODEL`, `OPENROUTER_REFERER`, `OPENROUTER_TITLE`) before running.
 - Each daily scrape makes a single call to `openrouter/gpt-5.1-thinking` asking for actionable AI/ML trends, then appends the response to the same markdown file.
 - Without credentials the LLM step is skipped; the scraper still writes the daily digest.
+- If you hit quota issues, override `OPENROUTER_MAX_TOKENS` (defaults to 600) to fit your plan.
 
 ### Deployment notes
 1. Build an Azure Storage Account (Blob) for `data/raw` + `data/weekly_reviews`.

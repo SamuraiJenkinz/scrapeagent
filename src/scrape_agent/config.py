@@ -20,6 +20,7 @@ class Settings:
     openrouter_model: str = os.getenv("OPENROUTER_MODEL", "openrouter/gpt-5.1-thinking")
     openrouter_referer: str = os.getenv("OPENROUTER_REFERER", "https://scrapeagent.local")
     openrouter_title: str = os.getenv("OPENROUTER_TITLE", "ScrapeAgent")
+    openrouter_max_tokens: int = int(os.getenv("OPENROUTER_MAX_TOKENS", "600"))
 
     @property
     def is_cloud_mode(self) -> bool:

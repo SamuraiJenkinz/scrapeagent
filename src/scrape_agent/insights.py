@@ -19,6 +19,7 @@ def summarize_ai_insights(
     model: str,
     referer: str,
     title: str,
+    max_tokens: int,
 ) -> str:
     if not posts:
         return ""
@@ -26,6 +27,7 @@ def summarize_ai_insights(
     story_list = "\n".join(f"- {p.title} ({p.url})" for p in posts)
     payload = {
         "model": model,
+        "max_tokens": max_tokens,
         "messages": [
             {
                 "role": "system",
